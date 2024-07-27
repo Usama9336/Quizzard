@@ -3,6 +3,8 @@ import mongoose from "mongoose"
 import usersRoute from "./routes/users.js"
 import clientRoute from "./routes/client.js"
 import scoreRoute from "./routes/score.js"
+import quizRoute from "./routes/newquiz.js"
+import newquesRoute from "./routes/newquestions.js"
 import dotenv from "dotenv"
 import cors from "cors";
 //import Users from "../modals/Feedback.js"
@@ -35,6 +37,8 @@ app.use(express.json())
 app.use("/questions",usersRoute)
 app.use("/user",clientRoute)
 app.use("/score",scoreRoute)
+app.use("/newquiz",quizRoute)
+app.use("/newquestions",newquesRoute)
 /*app.get("/questions/questions",async(req,res)=>{
     try{
     const data=await Users.find({})
